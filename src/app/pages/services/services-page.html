@@ -1,0 +1,36 @@
+<section class="relative overflow-hidden px-5 py-20 sm:px-6 lg:px-8">
+  <div class="absolute inset-0 -z-10 brand-grid"></div>
+  <div class="mx-auto max-w-7xl">
+    <wsl-section-header
+      eyebrow="Services"
+      title="Premium engineering services for ambitious digital products."
+      description="From first architecture decisions to reliable production systems, Webstacklabs helps teams build software that is fast, scalable, and a pleasure to use."
+      align="center"
+    />
+    <div class="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-4" @staggerFadeUp>
+      @for (service of services; track service.title) {
+        <wsl-service-card data-animate [service]="service" />
+      }
+    </div>
+  </div>
+</section>
+
+<section class="px-5 py-20 sm:px-6 lg:px-8">
+  <div class="mx-auto grid max-w-7xl gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+    <wsl-section-header
+      eyebrow="Delivery model"
+      title="Small senior teams, clean communication, measurable releases."
+      description="We shape the engagement around the product stage: launch a V1, modernize a legacy app, automate a workflow, or strengthen a product platform for scale."
+    />
+    <div class="grid gap-4">
+      @for (item of ['Discovery sprint and technical roadmap', 'Reusable frontend and backend foundations', 'Cloud deployment and monitoring setup', 'Optimization cycles after launch']; track item) {
+        <div class="blueprint-card rounded-3xl p-5 text-base font-bold text-slate-800">{{ item }}</div>
+      }
+    </div>
+  </div>
+</section>
+
+<wsl-cta-section
+  eyebrow="Need a focused engineering partner?"
+  title="Bring us the product challenge. We will help turn it into a buildable system."
+/>

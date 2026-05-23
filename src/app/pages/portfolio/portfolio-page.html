@@ -1,0 +1,21 @@
+<section class="relative overflow-hidden px-5 py-20 sm:px-6 lg:px-8">
+  <div class="absolute inset-0 -z-10 brand-grid"></div>
+  <div class="mx-auto max-w-7xl">
+    <wsl-section-header
+      eyebrow="Portfolio / Case Studies"
+      title="Product systems shaped for scale, speed, and operational clarity."
+      description="A V1 showcase of representative Webstacklabs work across SaaS workflows, education operations, and CRM automation."
+      align="center"
+    />
+    <div class="mt-12 grid gap-6 lg:grid-cols-3" @staggerFadeUp>
+      @for (caseStudy of caseStudies; track caseStudy.title; let index = $index) {
+        <wsl-portfolio-card data-animate [caseStudy]="caseStudy" [index]="index" />
+      }
+    </div>
+  </div>
+</section>
+
+<wsl-cta-section
+  eyebrow="Have a similar product challenge?"
+  title="Let’s map the workflow, architecture, and launch path together."
+/>

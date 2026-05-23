@@ -1,0 +1,55 @@
+<header class="sticky top-0 z-50 border-b border-blue-500/10 bg-white/78 backdrop-blur-2xl">
+  <nav class="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:px-6 lg:px-8" aria-label="Primary navigation">
+    <a routerLink="/" class="flex items-center" aria-label="Webstacklabs home" (click)="closeMenu()">
+      <img src="assets/brand/logo-final.png" alt="Webstacklabs" class="h-9 w-auto max-w-[210px] object-contain">
+    </a>
+
+    <div class="hidden items-center gap-1 rounded-full border border-blue-500/10 bg-white/70 p-1 shadow-sm shadow-blue-950/5 lg:flex">
+      @for (item of navItems; track item.path) {
+        <a
+          [routerLink]="item.path"
+          routerLinkActive="bg-blue-600 text-white shadow-md shadow-blue-600/20"
+          [routerLinkActiveOptions]="{ exact: item.path === '/' }"
+          class="rounded-full px-4 py-2 text-sm font-semibold text-slate-600 transition hover:bg-blue-50 hover:text-blue-700"
+        >
+          {{ item.label }}
+        </a>
+      }
+    </div>
+
+    <a routerLink="/contact" class="hidden items-center gap-2 rounded-full bg-slate-950 px-5 py-3 text-sm font-bold text-white shadow-lg shadow-blue-950/18 transition hover:-translate-y-0.5 hover:bg-blue-700 lg:inline-flex">
+      Start a Project
+      <wsl-icon name="arrow-right" class="h-4 w-4" />
+    </a>
+
+    <button type="button" class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-blue-500/15 bg-white text-slate-950 shadow-sm lg:hidden" (click)="toggleMenu()" [attr.aria-expanded]="isMenuOpen" aria-label="Toggle navigation">
+      @if (isMenuOpen) {
+        <wsl-icon name="x" class="h-5 w-5" />
+      } @else {
+        <wsl-icon name="menu" class="h-5 w-5" />
+      }
+    </button>
+  </nav>
+
+  @if (isMenuOpen) {
+    <div class="border-t border-blue-500/10 bg-white/94 px-5 py-4 shadow-xl shadow-blue-950/8 lg:hidden">
+      <div class="mx-auto grid max-w-7xl gap-2">
+        @for (item of navItems; track item.path) {
+          <a
+            [routerLink]="item.path"
+            routerLinkActive="bg-blue-600 text-white"
+            [routerLinkActiveOptions]="{ exact: item.path === '/' }"
+            class="rounded-2xl px-4 py-3 text-base font-semibold text-slate-700 transition hover:bg-blue-50"
+            (click)="closeMenu()"
+          >
+            {{ item.label }}
+          </a>
+        }
+        <a routerLink="/contact" class="mt-2 inline-flex items-center justify-center gap-2 rounded-2xl bg-slate-950 px-5 py-3 font-bold text-white" (click)="closeMenu()">
+          Start a Project
+          <wsl-icon name="arrow-right" class="h-4 w-4" />
+        </a>
+      </div>
+    </div>
+  }
+</header>

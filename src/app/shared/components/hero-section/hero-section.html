@@ -1,0 +1,99 @@
+<section class="relative isolate overflow-hidden bg-slate-950 px-5 pb-20 pt-16 text-white sm:px-6 sm:pt-20 lg:px-8 lg:pb-28">
+  <div class="absolute inset-0 -z-10 dark-grid opacity-80"></div>
+  <div class="animated-glow absolute -left-32 -top-32 -z-10 h-[32rem] w-[32rem] rounded-full bg-blue-600/35 blur-3xl"></div>
+  <div class="animated-glow absolute right-0 top-16 -z-10 h-[30rem] w-[30rem] rounded-full bg-red-600/14 blur-3xl [animation-delay:1.4s]"></div>
+  <div class="absolute inset-x-0 bottom-0 -z-10 h-40 bg-gradient-to-t from-white to-transparent"></div>
+
+  <div class="mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-[1.02fr_0.98fr]">
+    <div @fadeUp>
+      <div class="inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/8 px-4 py-2 text-sm font-bold text-blue-100 shadow-sm shadow-blue-950/5 backdrop-blur-xl">
+        <span class="h-2 w-2 rounded-full bg-red-500 shadow-[0_0_18px_rgba(255,16,16,0.75)]"></span>
+        Engineering-first SaaS and automation studio
+      </div>
+      <h1 class="mt-8 text-balance text-5xl font-black tracking-tight text-white sm:text-6xl lg:text-7xl">
+        Engineering scalable SaaS, AI workflows, and cloud-ready platforms.
+      </h1>
+      <p class="mt-7 max-w-2xl text-lg leading-8 text-slate-300 sm:text-xl">
+        Webstacklabs helps startups and growing businesses build high-performance digital products with modern frontend architecture, backend systems, automation, integrations, and cloud engineering.
+      </p>
+      <div class="mt-9 flex flex-col gap-3 sm:flex-row">
+        <a routerLink="/contact" class="inline-flex items-center justify-center gap-2 rounded-full bg-blue-600 px-6 py-4 text-sm font-black text-white shadow-xl shadow-blue-600/24 transition hover:-translate-y-0.5 hover:bg-blue-700">
+          Start a Project
+          <wsl-icon name="arrow-right" class="h-4 w-4" />
+        </a>
+        <a routerLink="/services" class="inline-flex items-center justify-center gap-2 rounded-full border border-white/14 bg-white px-6 py-4 text-sm font-black text-slate-950 shadow-lg shadow-blue-950/20 transition hover:-translate-y-0.5 hover:border-blue-300 hover:text-blue-700">
+          <wsl-icon name="play" class="h-4 w-4 fill-blue-600 text-blue-600" />
+          View Services
+        </a>
+      </div>
+      <div class="mt-8 flex flex-wrap gap-3 text-xs font-black uppercase tracking-[0.18em] text-blue-100">
+        <span class="rounded-full border border-white/10 bg-white/8 px-3 py-2">API-first</span>
+        <span class="rounded-full border border-white/10 bg-white/8 px-3 py-2">Cloud-native</span>
+        <span class="rounded-full border border-white/10 bg-white/8 px-3 py-2">Performance-led</span>
+      </div>
+    </div>
+
+    <div class="relative" @fadeUp>
+      <div class="animated-glow absolute -inset-8 rounded-[3rem] bg-blue-600/25 blur-3xl"></div>
+      <div class="absolute -left-4 top-8 z-10 hidden rounded-2xl border border-white/12 bg-white/10 px-4 py-3 text-xs font-black text-blue-50 shadow-2xl backdrop-blur-xl sm:block">Angular UI systems</div>
+      <div class="absolute -top-4 right-10 z-10 hidden rounded-2xl border border-white/12 bg-white/10 px-4 py-3 text-xs font-black text-blue-50 shadow-2xl backdrop-blur-xl sm:block">AI workflow layer</div>
+      <div class="absolute bottom-10 left-8 z-10 hidden rounded-2xl border border-red-400/30 bg-red-500/15 px-4 py-3 text-xs font-black text-red-50 shadow-2xl backdrop-blur-xl sm:block">Production-ready</div>
+      <div class="relative overflow-hidden rounded-[2.5rem] border border-white/12 bg-white/10 p-4 shadow-2xl shadow-blue-950/35 backdrop-blur-2xl sm:p-6">
+        <div class="rounded-[2rem] border border-white/10 bg-slate-950/95 p-5 text-white shadow-2xl shadow-blue-950/20">
+          <div class="mb-6 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="h-3 w-3 rounded-full bg-red-500"></span>
+              <span class="h-3 w-3 rounded-full bg-blue-400"></span>
+              <span class="h-3 w-3 rounded-full bg-white/30"></span>
+            </div>
+            <span class="rounded-full bg-white/8 px-3 py-1 text-xs font-bold text-blue-100">Webstacklabs Control Plane</span>
+          </div>
+
+          <div class="grid gap-4 lg:grid-cols-[1fr_0.86fr]">
+            <div class="angle-shell bg-blue-600 p-5 shadow-lg shadow-blue-600/20">
+              <div class="flex items-center justify-between gap-4">
+                <img src="assets/brand/icon.png" alt="" class="h-16 w-14 object-contain brightness-0 invert">
+                <div class="text-right">
+                  <p class="text-xs font-black uppercase tracking-[0.22em] text-blue-100">Platform build</p>
+                  <p class="mt-2 text-2xl font-black">SaaS • API • Cloud</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="rounded-3xl border border-white/10 bg-white/7 p-5">
+              <p class="text-xs font-black uppercase tracking-[0.18em] text-blue-200">Deploy</p>
+              <div class="mt-4 grid gap-2 font-mono text-xs text-slate-300">
+                <p><span class="text-blue-300">api</span>.route('/workflow')</p>
+                <p><span class="text-red-300">queue</span>.run('automation')</p>
+                <p><span class="text-blue-100">cloud</span>.ship()</p>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4 lg:col-span-2">
+              <div class="rounded-3xl border border-white/10 bg-white/7 p-5">
+                <p class="text-3xl font-black">98</p>
+                <p class="mt-2 text-xs font-bold uppercase tracking-[0.16em] text-slate-400">Performance score</p>
+              </div>
+              <div class="rounded-3xl border border-white/10 bg-white/7 p-5">
+                <p class="text-3xl font-black">4x</p>
+                <p class="mt-2 text-xs font-bold uppercase tracking-[0.16em] text-slate-400">Workflow velocity</p>
+              </div>
+            </div>
+
+            <div class="rounded-3xl border border-white/10 bg-white/7 p-5 lg:col-span-2">
+              <div class="mb-4 flex items-center justify-between">
+                <p class="font-black">Engineering pipeline</p>
+                <span class="rounded-full bg-red-500 px-3 py-1 text-xs font-black">LABS</span>
+              </div>
+              <div class="grid gap-3">
+                <div class="h-3 rounded-full bg-white/10"><div class="h-3 w-[88%] rounded-full bg-blue-500"></div></div>
+                <div class="h-3 rounded-full bg-white/10"><div class="h-3 w-[72%] rounded-full bg-blue-300"></div></div>
+                <div class="h-3 rounded-full bg-white/10"><div class="h-3 w-[56%] rounded-full bg-red-500"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
