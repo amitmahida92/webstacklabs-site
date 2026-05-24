@@ -37,6 +37,7 @@ jobs:
 
       - name: Prepare GitHub Pages artifact
         run: |
+          echo "webstacklabs.com" > dist/webstacklabs-site/browser/CNAME
           cp dist/webstacklabs-site/browser/index.html dist/webstacklabs-site/browser/404.html
           touch dist/webstacklabs-site/browser/.nojekyll
 
